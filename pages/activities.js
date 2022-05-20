@@ -11,7 +11,6 @@ const activities = ({ homeData, activities }) => {
 			<Head>
 				<title>Activités | CMS</title>
 			</Head>
-			<Navbar homeData={homeData?.length && homeData[0]} />
 
 			<div className="activity-container">
 				<div className="activity-box">
