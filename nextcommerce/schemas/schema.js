@@ -6,6 +6,8 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import banner from "./banners";
 import team from "./team";
 import activities from "./activities";
+import climb from "./climb";
+import ski from "./ski";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
 	// We name our schema
@@ -17,5 +19,7 @@ export default createSchema({
 		banner,
 		team,
 		activities,
+		climb,
+		ski,
 	]),
 });

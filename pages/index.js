@@ -7,17 +7,26 @@ import Join from "../components/Join";
 import Team from "../components/Team";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 export default function Home({ homeData, team }) {
 	return (
-		<div>
-			<Navbar homeData={homeData?.length && homeData[0]} />
-			<Header />
-			<About homeData={homeData?.length && homeData[0]} />
-			<Join homeData={homeData?.length && homeData[0]} />
-			<Team team={team?.length && team} />
-			<Contact />
-			<Footer />
-		</div>
+		<>
+			<Head>
+				<title>Accueil | CMS</title>
+			</Head>
+			<motion.div
+				transition={{
+					staggerChildren: 0.5,
+				}}
+			>
+				<Navbar homeData={homeData?.length && homeData[0]} />
+				<Header />
+				<About homeData={homeData?.length && homeData[0]} />
+				<Join homeData={homeData?.length && homeData[0]} />
+				<Team team={team?.length && team} />
+				<Contact />
+			</motion.div>
+		</>
 	);
 }
 

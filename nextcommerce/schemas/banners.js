@@ -50,5 +50,21 @@ export default {
 				hotspot: true,
 			},
 		},
+		{
+			name: "cascadeImg",
+			title: "Image Cascades",
+			type: "image",
+			options: {
+				hotspot: true,
+			},
+		},
+		{
+			name: "capImg",
+			title: "Image Cap St-Francois",
+			type: "image",
+			options: {
+				hotspot: true,
+			},
+		},
 	],
 };

@@ -5,42 +5,19 @@ import { motion } from "framer-motion";
 const Header = () => {
 	return (
 		<div className="header-section">
-			<motion.div transition={{ staggerChildren: 1.5 }} className="header-box">
+			<motion.div className="header-box">
 				<motion.h1
-					initial="hidden"
-					animate="visible"
-					variants={{
-						hidden: {
-							opacity: 0,
-						},
-						visible: {
-							opacity: 1,
-							transition: {
-								ease: "easeIn",
-								duration: 1,
-							},
-						},
-					}}
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 0.5 }}
 					className="header-title"
 				>
 					Club de Montagne du Saguenay
 				</motion.h1>
 				<motion.p
-					initial="hidden"
-					animate="visible"
-					variants={{
-						hidden: {
-							opacity: 0,
-						},
-						visible: {
-							opacity: 1,
-							transition: {
-								duration: 1,
-								ease: "easeIn",
-								delay: 0.4,
-							},
-						},
-					}}
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 0.75 }}
 					className="header-text"
 				>
 					Le Club de Montagne du Saguenay (CMS), créé en 1971, a pour principal
@@ -50,25 +27,13 @@ const Header = () => {
 					Saguenay-Lac-Saint-Jean.
 				</motion.p>
 				<motion.div
-					initial="hidden"
-					animate="visible"
-					variants={{
-						hidden: {
-							opacity: 0,
-						},
-						visible: {
-							opacity: 1,
-							transition: {
-								duration: 1,
-								ease: "easeIn",
-								delay: 0.7,
-							},
-						},
-					}}
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 1 }}
 					className="header-buttons"
 				>
-					<Link href="/">connaître nos activités</Link>
-					<Link href="/">où grimper ?</Link>
+					<Link href="/activities">connaître nos activités</Link>
+					<Link href="/climb">où grimper ?</Link>
 				</motion.div>
 			</motion.div>
 		</div>

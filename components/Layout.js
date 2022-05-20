@@ -3,15 +3,11 @@ import Head from "next/head";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { client } from "../lib/client";
-export default function Layout({ children, homeData }) {
+export default function Layout({ homeData, children }) {
 	return (
 		<div className="layout">
-			<Head>
-				<title>CMS</title>
-			</Head>
-			<header>
-				<Navbar homeData={homeData?.length && homeData[0]} />
-			</header>
+			<Navbar homeData={homeData?.length && homeData[0]} />
+
 			<main className="main-container">{children}</main>
 			<footer>
 				<Footer />
@@ -19,6 +15,7 @@ export default function Layout({ children, homeData }) {
 		</div>
 	);
 }
+
 export const getServerSideProps = async () => {
 	const bannerQuery = '*[_type == "home"]';
 	const homeData = await client.fetch(bannerQuery);

@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import ActivityCard from "../components/ActivityCard";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -7,6 +8,9 @@ import { client } from "../lib/client";
 const activities = ({ homeData, activities }) => {
 	return (
 		<>
+			<Head>
+				<title>Activités | CMS</title>
+			</Head>
 			<Navbar homeData={homeData?.length && homeData[0]} />
 
 			<div className="activity-container">
@@ -16,7 +20,6 @@ const activities = ({ homeData, activities }) => {
 					))}
 				</div>
 			</div>
-			<Footer />
 		</>
 	);
 };
