@@ -8,6 +8,7 @@ import team from "./team";
 import activities from "./activities";
 import climb from "./climb";
 import ski from "./ski";
+import indoor from "./indoor";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
 	// We name our schema
@@ -21,5 +22,6 @@ export default createSchema({
 		activities,
 		climb,
 		ski,
+		indoor,
 	]),
 });

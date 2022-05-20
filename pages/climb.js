@@ -2,8 +2,9 @@ import React from "react";
 import Head from "next/head";
 import ClimbCard from "../components/ClimbCard";
 import { client, urlFor } from "../lib/client";
+import IndoorCard from "../components/IndoorCard";
 
-export default function Climb({ climb, homeData }) {
+export default function Climb({ climb, homeData, indoorData }) {
 	return (
 		<>
 			<Head>
@@ -74,21 +75,36 @@ export default function Climb({ climb, homeData }) {
 								pont Dubuc, à Chicoutimi Nord. Par sa proximité de la ville et
 								la facilité à installer des moulinettes, c'est l'endroit idéal
 								pour initier les débutants ou pour aller grimper lorsque l'on a
-								peu de temps. Nous vous demandons de respecter la quiétude des
-								propriétaires : il est très important de ne pas se stationner
-								dans la courbe, ni devant le 200 de la rue Richmond sous peine
-								de remorquage à vos frais.
+								peu de temps.
+								<br />
+								Nous vous demandons de respecter la quiétude des propriétaires :
+								<span className="red">
+									 il est très important de ne pas se stationner dans la courbe,
+									ni devant le 200 de la rue Richmond sous peine de remorquage à
+									vos frais.
+								</span>
 							</p>
 							<h3 className="cap-title">Secteur de Sainte-Marguerite</h3>
 							<p className="cap-text">
 								Le secteur de la Dent de Dracula se trouve à l'intérieur des
-								limites du Parc National des Monts-Valin. Toute personne qui
-								accède, circule ou pratique une activité doit être titulaire
-								d'une autorisation d'accès quotidienne disponible au parc ou sur
-								Internet.
+								limites du Parc National des Monts-Valin.
+								<br />
+								<span className="red">
+									Toute personne qui accède, circule ou pratique une activité
+									doit être titulaire d'une autorisation d'accès quotidienne
+									disponible au parc ou sur Internet.
+								</span>
 							</p>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div className="indoor-section">
+				<h3 className="indoor-maintitle">Intérieur</h3>
+				<div className="indoor-box">
+					{indoorData?.map((id) => (
+						<IndoorCard key={id._id} indoor={id} />
+					))}
 				</div>
 			</div>
 		</>
@@ -100,7 +116,9 @@ export const getServerSideProps = async () => {
 	const climb = await client.fetch(bannerQuery);
 	const query = '*[_type == "home"]';
 	const homeData = await client.fetch(query);
+	const indoorQuery = '*[_type == "indoor"]';
+	const indoorData = await client.fetch(indoorQuery);
 	return {
-		props: { climb, homeData },
+		props: { climb, homeData, indoorData },
 	};
 };

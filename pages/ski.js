@@ -24,13 +24,7 @@ function Ski({ climb }) {
 							</Link>
 						</p>
 					</div>
-					{climb?.length && (
-						<img
-							src={urlFor(climb[0].image)}
-							style={{ borderRadius: "50px" }}
-							alt=""
-						/>
-					)}
+					{climb?.length && <img src={urlFor(climb[0].image)} alt="" />}
 				</div>
 			</div>
 		</>

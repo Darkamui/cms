@@ -16,6 +16,7 @@ const Navbar = ({ homeData }) => {
 					<Link href="/activities">Activités</Link>
 					<Link href="/climb">Où Grimper ?</Link>
 					<Link href="/ski">Ski Hors Piste</Link>
+					<Link href="/ski">Nouvelles</Link>
 				</div>
 			</div>
 		</div>
