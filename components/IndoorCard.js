@@ -7,7 +7,12 @@ const IndoorCard = ({ indoor }) => {
 		<div className="indoor-card">
 			<div className="indoor-left">
 				<div className="indoor-header">
-					<a href={indoor.link} className="indoor-title" target="_blank">
+					<a
+						href={indoor.link}
+						rel="noreferrer"
+						className="indoor-title"
+						target="_blank"
+					>
 						<h3 className="indoor-title">{indoor.name}</h3>
 					</a>
 					<p className="indoor-headtext">
@@ -22,6 +27,7 @@ const IndoorCard = ({ indoor }) => {
 						href={indoor.link}
 						className="indoor-tel"
 						target="_blank"
+						rel="noreferrer"
 						style={{ fontWeight: 600 }}
 					>
 						Site Officiel
