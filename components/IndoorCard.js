@@ -41,14 +41,18 @@ const IndoorCard = ({ indoor }) => {
 				<div className="indoor-right-details">
 					<div className="">
 						<p className="indoor-details-title">Horaire:</p>
-						{indoor.times.map((id) => (
-							<p className="indoor-times">{id}</p>
+						{indoor.times.map((id, i) => (
+							<p className="indoor-times" key={i}>
+								{id}
+							</p>
 						))}
 					</div>
 					<div className="">
 						<p className="indoor-details-title">Tarifs:</p>
-						{indoor.cost.map((id) => (
-							<p className="indoor-cost">{id}</p>
+						{indoor.cost.map((id, i) => (
+							<p className="indoor-cost" key={i}>
+								{id}
+							</p>
 						))}
 					</div>
 				</div>
