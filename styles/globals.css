@@ -755,6 +755,24 @@ textarea {
 	border-radius: 15px;
 }
 
+@media screen and (max-width: 1250px) {
+	.climb-box {
+		justify-content: center;
+		padding-top: 10vh;
+	}
+}
+@media screen and (max-width: 840px) {
+	.climb-box {
+		justify-content: center;
+		padding-top: 10vh;
+	}
+	.climb-card img {
+		max-width: 20rem;
+	}
+	.climb-section {
+		padding: 2rem 3rem;
+	}
+}
 /* ICE SECTION */
 
 .ice-section {
@@ -851,6 +869,33 @@ textarea {
 .red {
 	color: rgb(255, 138, 138);
 	font-weight: 900;
+}
+@media screen and (max-width: 1250px) {
+	.ice-text {
+		padding: 0 3rem;
+	}
+	.cascade-box {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.cap-box {
+		padding: 0 3rem;
+		flex-direction: column-reverse;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	.ice-text {
+		font-size: 1.7rem;
+	}
+	.cascade-box {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.cap-box {
+		padding: 0 3rem;
+		flex-direction: column-reverse;
+	}
 }
 
 /* INDOOR SECTION */
@@ -960,6 +1005,20 @@ textarea {
 	font-size: 1.5rem;
 	padding: 1rem;
 	color: black;
+}
+/* @media screen and (max-width: 1250px) {
+
+} */
+@media screen and (max-width: 840px) {
+	.indoor-card {
+		flex-direction: column;
+	}
+	.indoor-right {
+		flex-direction: column-reverse;
+	}
+	.indoor-summary {
+		font-size: 1.7rem;
+	}
 }
 /* SKI PAGE */
 
