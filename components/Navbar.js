@@ -9,7 +9,7 @@ const Navbar = ({ homeData }) => {
 			<div className="navbar">
 				<div className="navbar-logo__container">
 					<Link href="/">
-						<Image src="/logo.webp" width="150px" height="75px" />
+						<Image src="/logo.webp" width="150px" height="70px" />
 					</Link>
 				</div>
 				<div className="navbar-links__container">

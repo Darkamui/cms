@@ -19,7 +19,6 @@ export default function Home({ homeData, team }) {
 					staggerChildren: 0.5,
 				}}
 			>
-				<Navbar homeData={homeData?.length && homeData[0]} />
 				<Header />
 				<About homeData={homeData?.length && homeData[0]} />
 				<Join homeData={homeData?.length && homeData[0]} />
