@@ -546,9 +546,9 @@ textarea {
 }
 @media screen and (max-width: 540px) {
 	.contact-form {
-		width: 60%;
+		width: 100%;
 		margin: auto;
-		padding-top: 4rem;
+		padding: 4rem 0;
 	}
 	.contact-title {
 		font-size: 2rem;
@@ -644,6 +644,7 @@ textarea {
 .left-activity img {
 	width: 100%;
 	object-fit: cover;
+	border-radius: 50px;
 }
 .activity-time {
 	font-size: 2rem;
@@ -677,6 +678,9 @@ textarea {
 	.activity-text {
 		font-size: 1.5rem;
 		line-height: 1.7;
+	}
+	.right-activity {
+		padding: 1rem 0;
 	}
 	.activity-card {
 		flex-direction: column-reverse;
@@ -764,10 +768,17 @@ textarea {
 @media screen and (max-width: 840px) {
 	.climb-box {
 		justify-content: center;
-		padding-top: 10vh;
+		padding-top: 5vh;
 	}
 	.climb-card img {
 		max-width: 20rem;
+	}
+	.climb-card-text,
+	.climb-card-content a {
+		font-size: 1.5rem;
+	}
+	.climb-card-title {
+		font-size: 2rem;
 	}
 	.climb-section {
 		padding: 2rem 3rem;
@@ -892,9 +903,18 @@ textarea {
 		flex-direction: column-reverse;
 		align-items: center;
 	}
+	.cascade-right {
+		gap: 3rem;
+	}
 	.cap-box {
 		padding: 0 3rem;
 		flex-direction: column-reverse;
+	}
+	.cascade-left img {
+		max-width: 20rem;
+	}
+	.cap-text {
+		padding: 1rem 0;
 	}
 }
 
@@ -1017,7 +1037,14 @@ textarea {
 		flex-direction: column-reverse;
 	}
 	.indoor-summary {
-		font-size: 1.7rem;
+		font-size: 1.5rem;
+		padding: 1rem 0;
+	}
+	.indoor-title {
+		font-size: 2rem;
+	}
+	.indoor-right-details {
+		flex-direction: column;
 	}
 }
 /* SKI PAGE */
@@ -1091,8 +1118,11 @@ textarea {
 		border-radius: 50px;
 	}
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 840px) {
 	.ski-box img {
 		max-width: 20rem;
+	}
+	.ski-content {
+		padding: 1rem 0;
 	}
 }
