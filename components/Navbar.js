@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "../lib/client";
 const Navbar = ({ homeData }) => {
-	const [toggleMenu, setToggleMenu] = useState(true);
+	const [toggleMenu, setToggleMenu] = useState(false);
 	return (
 		<div className="container-nav">
 			<div className="navbar">
 				<div className="navbar-logo__container">
 					<Link href="/">
-						<Image src="/logo.png" width="150px" height="75px" />
+						<Image src="/logo.webp" width="150px" height="75px" />
 					</Link>
 				</div>
 				<div className="navbar-links__container">
@@ -34,10 +34,10 @@ const Navbar = ({ homeData }) => {
 								className="navbar-menuopen"
 								onClick={() => setToggleMenu(!toggleMenu)}
 							>
-								<Image src="/closemenu.png" width="50px" height="45px" />
+								<Image src="/closemenu.webp" width="50px" height="45px" />
 							</div>
 
-							<Image src="/logo.png" width="150px" height="75px" />
+							<Image src="/logo.webp" width="150px" height="75px" />
 							<Link href="/">Accueil</Link>
 							<Link href="/activities">Activités</Link>
 							<Link href="/climb">Où Grimper ?</Link>

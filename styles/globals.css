@@ -145,7 +145,7 @@ body::-webkit-scrollbar-thumb {
 			rgba(255, 255, 255, 0.75),
 			rgba(255, 255, 255, 0.75)
 		),
-		url("/header.jpg"); /* The image used */
+		url("/header.webp"); /* The image used */
 	background-color: #cccccc; /* Used if the image is unavailable */
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
@@ -355,7 +355,7 @@ body::-webkit-scrollbar-thumb {
 .join-section {
 	min-height: 90vh;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-		url("/dark-bg.jpg"); /* The image used */
+		url("/dark-bg.webp"); /* The image used */
 	background-color: #cccccc; /* Used if the image is unavailable */
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
@@ -627,7 +627,7 @@ textarea {
 			rgba(255, 255, 255, 0.5),
 			rgba(255, 255, 255, 0.5)
 		),
-		url("/light-bg.jpg"); /* The image used */
+		url("/light-bg.webp"); /* The image used */
 	background-color: #cccccc; /* Used if the image is unavailable */
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
@@ -729,7 +729,7 @@ textarea {
 			rgba(255, 255, 255, 0.5),
 			rgba(255, 255, 255, 0.5)
 		),
-		url("/climb-bg.jpg"); /* The image used */
+		url("/climb-bg.webp"); /* The image used */
 	background-color: #cccccc; /* Used if the image is unavailable */
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
@@ -821,7 +821,7 @@ textarea {
 .ice-section {
 	min-height: 80vh;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-		url("/ice-bg.jpg"); /* The image used */
+		url("/ice-bg.webp"); /* The image used */
 	background-color: #cccccc; /* Used if the image is unavailable */
 	background-position: top; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
@@ -958,7 +958,7 @@ textarea {
 			rgba(255, 255, 255, 0.5),
 			rgba(255, 255, 255, 0.5)
 		),
-		url("/indoor-bg.jpg"); /* The image used */
+		url("/indoor-bg.webp"); /* The image used */
 	background-color: #cccccc; /* Used if the image is unavailable */
 	background-position: top; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
@@ -1087,7 +1087,7 @@ textarea {
 			rgba(255, 255, 255, 0.5),
 			rgba(255, 255, 255, 0.5)
 		),
-		url("/ski-bg.jpg"); /* The image used */
+		url("/ski-bg.webp"); /* The image used */
 	background-color: #cccccc; /* Used if the image is unavailable */
 	background-position: top; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
