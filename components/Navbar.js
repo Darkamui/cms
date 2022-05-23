@@ -1,9 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "../lib/client";
+import {
+	useSpring,
+	useTransform,
+	motion,
+	useViewportScroll,
+} from "framer-motion";
 const Navbar = ({ homeData }) => {
 	const [toggleMenu, setToggleMenu] = useState(false);
+	const [currentPrecent, setCurrentPercent] = useState(null);
+	const [currentProgressColor, setCurrentProgressColor] = useState(null);
+	const { scrollYProgress } = useViewportScroll();
+	const yRange = useTransform(scrollYProgress, [0, 1], [0, 100]);
+	const pathLength = useSpring(scrollYProgress, {
+		stiffness: 400,
+		damping: 90,
+	});
+
+	useEffect(
+		() =>
+			yRange.onChange((v) => {
+				setCurrentPercent(Math.trunc(yRange.current));
+			}),
+		[yRange]
+	);
+
+	useEffect(() => {
+		setCurrentProgressColor(
+			currentPrecent >= 90
+				? "#7c990a"
+				: currentPrecent >= 45
+				? "#0d80aa"
+				: currentPrecent >= 20
+				? "#a37d0a"
+				: "#ad1040"
+		);
+	}, [currentPrecent]);
+	useEffect(
+		() =>
+			yRange.onChange((v) => {
+				setCurrentPercent(Math.trunc(yRange.current));
+			}),
+		[yRange]
+	);
+
 	return (
 		<div className="container-nav">
 			<div className="navbar">
@@ -13,6 +55,36 @@ const Navbar = ({ homeData }) => {
 							<Image src="/logo.webp" width="150px" height="70px" />
 						</a>
 					</Link>
+					<div className="progressy">
+						<svg className="progress-icon" viewBox="0 0 60 60">
+							<motion.path
+								fill={currentPrecent === 100 ? "#CDFF00" : "none"}
+								strokeWidth="8"
+								stroke={currentProgressColor}
+								strokeDasharray="0 1"
+								d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
+								style={{
+									pathLength,
+									rotate: 90,
+									translateX: 10,
+									translateY: 15,
+									opacity: pathLength,
+									scaleX: -1,
+								}}
+							/>
+						</svg>
+						<motion.div
+							style={{
+								position: "-webkit-sticky",
+								position: "absolute",
+								top: "40px",
+								left: "40px",
+								width: "50px",
+								height: "50px",
+								opacity: pathLength,
+							}}
+						></motion.div>
+					</div>
 				</div>
 				<div className="navbar-links__container">
 					<Link href="/">Accueil</Link>
