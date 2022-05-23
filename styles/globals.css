@@ -146,15 +146,6 @@ body::-webkit-scrollbar-thumb {
 		flex-direction: row;
 		justify-content: space-around;
 	}
-	.progressy {
-		position: fixed;
-		top: 20px;
-		left: 20px;
-		width: 120px;
-		height: 120px;
-		color: white;
-		max-height: 5rem;
-	}
 }
 /* HEADER SECTION */
 
