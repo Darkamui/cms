@@ -8,8 +8,8 @@ const NewsCard = ({ news }) => {
 			{news.desc && <p className="news-text">{news.desc}</p>}
 			<div className="news-links">
 				{news.links &&
-					news.links?.map((link) => (
-						<div>
+					news.links?.map((link, i) => (
+						<div key={i}>
 							<a href={link.address}>{link.name}</a>
 						</div>
 					))}
@@ -17,8 +17,8 @@ const NewsCard = ({ news }) => {
 
 			<div className="news-files">
 				{news.files &&
-					news.files.map((link) => (
-						<div>
+					news.files.map((link, i) => (
+						<div key={i}>
 							<a href={link.file}>{link.name}</a>
 						</div>
 					))}
@@ -26,7 +26,9 @@ const NewsCard = ({ news }) => {
 
 			<div className="news-images">
 				{news.images &&
-					news.images.map((image) => <img src={urlFor(image)} alt="" />)}
+					news.images.map((image, i) => (
+						<img key={i} src={urlFor(image)} alt="" />
+					))}
 			</div>
 		</div>
 	);
