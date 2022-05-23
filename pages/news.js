@@ -4,13 +4,18 @@ import { client } from "../lib/client";
 
 function News({ news }) {
 	return (
-		<div className="news-page">
-			<div className="news-container">
-				{news?.map((id) => (
-					<NewsCard key={id._id} news={id} />
-				))}
+		<>
+			<Head>
+				<title>Nouvelles | CMS</title>
+			</Head>
+			<div className="news-page">
+				<div className="news-container">
+					{news?.map((id) => (
+						<NewsCard key={id._id} news={id} />
+					))}
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 export const getServerSideProps = async () => {

@@ -1299,3 +1299,171 @@ textarea {
 		font-size: 1.3rem;
 	}
 }
+
+/*SITES PAGE */
+
+.sites-page {
+	min-height: 90vh;
+	padding-top: 15vh;
+	display: flex;
+	flex-wrap: wrap;
+	background-image: linear-gradient(
+			rgba(255, 255, 255, 0.75),
+			rgba(255, 255, 255, 0.75)
+		),
+		url("/sites-bg.jpg"); /* The image used */
+	background-color: #cccccc; /* Used if the image is unavailable */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
+	background-attachment: fixed;
+}
+.sites-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	flex: 35%;
+}
+.sites-box {
+	justify-content: flex-start;
+	align-items: center;
+}
+.sites-container p {
+	font-size: 1.75rem;
+}
+.sites-container {
+	max-width: 120rem;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: center;
+	padding: 2rem;
+}
+.sites-container h3 {
+	font-size: 2rem;
+}
+.siteDetails-container {
+	min-height: 90vh;
+	display: flex;
+	padding: 2rem;
+	flex-wrap: wrap;
+	background-image: linear-gradient(
+			rgba(255, 255, 255, 0.75),
+			rgba(255, 255, 255, 0.75)
+		),
+		url("/sites-bg.jpg"); /* The image used */
+	background-color: #cccccc; /* Used if the image is unavailable */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
+	background-attachment: fixed;
+	gap: 2rem;
+}
+
+.site-detail-card {
+	max-width: 120rem;
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 2rem;
+	border-radius: 25px;
+	display: flex;
+	flex-direction: column;
+}
+.site-detail-card-top {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.site-detail-card-top a {
+	padding: 1rem 2rem;
+	background-color: rgb(1, 177, 175);
+	color: white;
+	font-size: 1.75rem;
+	text-transform: uppercase;
+	border-radius: 50px;
+}
+.site-detail-card-title {
+	font-size: 2.25rem;
+	text-transform: uppercase;
+}
+.site-detail-card-directions {
+	padding: 0.5rem 0;
+	text-align: center;
+	font-size: 1.5rem;
+	font-style: italic;
+	line-height: 1.7;
+	width: 70%;
+	margin: 0 auto;
+}
+.site-detail-card-description {
+	width: 80%;
+	margin: 0 auto;
+	font-size: 1.75rem;
+	line-height: 1.7;
+	padding: 0.5rem 0;
+}
+.site-detail-card-images {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+}
+.site-detail-card img {
+	max-width: 40rem;
+	width: 100%;
+}
+.site-detail-card-bottom {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 1rem 0;
+}
+.site-detail-card-left-bottom {
+	padding: 2rem;
+	background-color: #fff;
+	width: 50%;
+}
+.site-detail-card-left-bottom h4 {
+	font-size: 1.75rem;
+	text-transform: uppercase;
+}
+.site-detail-card-left-bottom p {
+	font-size: 1.75rem;
+}
+.site-detail-card-links,
+.site-link-contain {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: center;
+}
+.site-detail-card-links a {
+	padding: 1rem 2rem;
+	background-color: orange;
+	color: black;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+@media screen and (max-width: 1200px) {
+	.site-detail-card-left-bottom {
+		width: 100%;
+	}
+	.site-detail-card-directions {
+		width: 90%;
+	}
+	.site-detail-card-description {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 840px) {
+	.sites-container p {
+		font-size: 1.5rem;
+	}
+	.sites-box {
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+}

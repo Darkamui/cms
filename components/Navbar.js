@@ -58,7 +58,7 @@ const Navbar = ({ homeData }) => {
 					<div className="progressy">
 						<svg className="progress-icon" viewBox="0 0 60 60">
 							<motion.path
-								fill={currentPrecent === 100 ? "#CDFF00" : "none"}
+								fill={currentPrecent === 100 ? "#7c990a" : "none"}
 								strokeWidth="8"
 								stroke={currentProgressColor}
 								strokeDasharray="0 1"

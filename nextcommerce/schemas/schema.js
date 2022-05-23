@@ -10,6 +10,8 @@ import climb from "./climb";
 import ski from "./ski";
 import indoor from "./indoor";
 import news from "./news";
+import sites from "./sites";
+import siteDetails from "./siteDetails";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
 	// We name our schema
@@ -25,5 +27,7 @@ export default createSchema({
 		ski,
 		indoor,
 		news,
+		sites,
+		siteDetails,
 	]),
 });
