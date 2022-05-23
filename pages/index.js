@@ -7,8 +7,9 @@ import Join from "../components/Join";
 import Team from "../components/Team";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import NewsSection from "../components/NewsSection";
 import { motion } from "framer-motion";
-export default function Home({ homeData, team }) {
+export default function Home({ homeData, team, news }) {
 	return (
 		<>
 			<Head>
@@ -19,7 +20,7 @@ export default function Home({ homeData, team }) {
 					staggerChildren: 0.5,
 				}}
 			>
-				<Header />
+				<Header news={news?.length && news} />
 				<About homeData={homeData?.length && homeData[0]} />
 				<Join homeData={homeData?.length && homeData[0]} />
 				<Team team={team?.length && team} />
@@ -34,7 +35,9 @@ export const getServerSideProps = async () => {
 	const homeData = await client.fetch(bannerQuery);
 	const query = '*[_type == "team"]';
 	const team = await client.fetch(query);
+	const newsQuery = '*[_type == "news"][0..3]';
+	const news = await client.fetch(newsQuery);
 	return {
-		props: { homeData, team },
+		props: { homeData, team, news },
 	};
 };

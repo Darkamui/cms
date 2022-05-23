@@ -2,7 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-const Header = () => {
+import { urlFor } from "../lib/client";
+const Header = ({ news }) => {
 	return (
 		<div className="header-section">
 			<motion.div className="header-box">
@@ -36,6 +37,18 @@ const Header = () => {
 					<Link href="/climb">où grimper ?</Link>
 				</motion.div>
 			</motion.div>
+			{/* <h2 className="news-section-title">NOUVELLES</h2>
+			<div className="news-section-card-box">
+				{news &&
+					news?.map((link) => (
+						<div className="news-section-card">
+							<h3 className="news-section-card-title">{link.name}</h3>
+							<div className="news-section-card-img">
+								<img src={urlFor(link.images[0])} alt="" />
+							</div>
+						</div>
+					))}
+			</div> */}
 		</div>
 	);
 };
