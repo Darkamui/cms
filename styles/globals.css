@@ -1251,6 +1251,7 @@ textarea {
 	align-items: center;
 	padding: 1.5rem 0;
 	gap: 1rem;
+	text-align: center;
 }
 .news-card img:last-child {
 	border-radius: 0 0 50px 50px;

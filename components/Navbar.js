@@ -62,7 +62,7 @@ const Navbar = ({ homeData }) => {
 							</div>
 
 							<div onClick={() => setToggleMenu(false)}>
-								<Link href="/ski" onClick={() => setToggleMenu(false)}>
+								<Link href="/news" onClick={() => setToggleMenu(false)}>
 									Nouvelles
 								</Link>
 							</div>
