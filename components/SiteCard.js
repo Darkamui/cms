@@ -11,8 +11,8 @@ const SiteCard = ({ site }) => {
 			<p className="site-detail-card-directions">{site.directions}</p>
 			<p className="site-detail-card-description">{site.desc}</p>
 			<div className="site-detail-card-images">
-				{site.images?.map((image) => (
-					<img src={urlFor(image)} alt="" />
+				{site.images?.map((image, i) => (
+					<img key={i} src={urlFor(image)} alt="" />
 				))}
 			</div>
 
@@ -35,7 +35,7 @@ const SiteCard = ({ site }) => {
 			<div className="site-link-contain">
 				{site.links &&
 					site.links.map((link) => (
-						<div className="site-detail-card-links">
+						<div key={link.name} className="site-detail-card-links">
 							<a href={link.address}>{link.name}</a>
 						</div>
 					))}

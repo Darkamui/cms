@@ -1,7 +1,7 @@
 import React from "react";
 import NewsCard from "../components/NewsCard";
 import { client } from "../lib/client";
-
+import Head from "next/head";
 function News({ news }) {
 	return (
 		<>

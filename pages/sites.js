@@ -12,7 +12,7 @@ function Sites({ sites, siteDetail }) {
 			<div className="sites-page">
 				<div className="sites-container">
 					{sites?.map((id) => (
-						<SitesCard site={id} />
+						<SitesCard key={id.sector} site={id} />
 					))}
 				</div>
 			</div>

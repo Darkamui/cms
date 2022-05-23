@@ -1235,7 +1235,7 @@ textarea {
 
 .news-card {
 	background-color: rgba(0, 0, 0, 0.7);
-	max-width: 80rem;
+	max-width: 60rem;
 	width: 100%;
 	border-radius: 50px;
 }
@@ -1254,7 +1254,7 @@ textarea {
 	padding: 0 2rem 3rem 2rem;
 }
 .news-card img {
-	max-width: 80rem;
+	max-width: 60rem;
 	width: 100%;
 }
 .news-files {
