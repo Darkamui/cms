@@ -646,16 +646,34 @@ textarea {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 2rem 0;
 }
 .fb-logo {
-	margin-top: 1.5rem;
 }
 .footer-section > p {
 	font-size: 1.75rem;
 	font-weight: 300;
-	padding: 1.5rem 0;
 	text-align: center;
 	line-height: 1.6;
+}
+.footer-links {
+	font-size: 2.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1rem 0;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+}
+.footer-links a {
+	text-transform: uppercase;
+	color: black;
+	font-weight: 700;
+}
+a:hover {
+	text-transform: uppercase;
+	color: white;
+	font-weight: 700;
 }
 @media screen and (max-width: 840px) {
 	.footer-section > p {
@@ -664,6 +682,10 @@ textarea {
 		padding: 1.5rem 0;
 		text-align: center;
 		line-height: 1.6;
+	}
+	.footer-links {
+		flex-direction: column;
+		gap: 1.5rem;
 	}
 }
 
