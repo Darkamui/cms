@@ -29,7 +29,7 @@ const SiteCard = ({ site, homeData }) => {
 						<div className="site-detail-join">
 							<div className="site-detail-join-left">
 								<h4>À noter</h4>
-								<a href="/">Adhérer En Ligne</a>
+								<a href="https://fqme.qc.ca/adherer/">Adhérer En Ligne</a>
 							</div>
 							<div className="joinimg">
 								<img src={urlFor(homeData.fqmeLogo)} alt="" />
