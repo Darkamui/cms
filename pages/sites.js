@@ -3,7 +3,7 @@ import React from "react";
 import { client } from "../lib/client";
 import SitesCard from "../components/SitesCard";
 import SiteCard from "../components/SiteCard";
-function Sites({ sites, siteDetail }) {
+function Sites({ sites, siteDetail, homeData }) {
 	return (
 		<>
 			<Head>
@@ -18,7 +18,11 @@ function Sites({ sites, siteDetail }) {
 			</div>
 			<div className="siteDetails-container">
 				{siteDetail?.map((id) => (
-					<SiteCard key={id.name} site={id} />
+					<SiteCard
+						key={id.name}
+						site={id}
+						homeData={homeData?.length && homeData[0]}
+					/>
 				))}
 			</div>
 		</>
@@ -29,8 +33,10 @@ export const getServerSideProps = async () => {
 	const sites = await client.fetch(bannerQuery);
 	const siteDetails = '*[_type == "siteDetails"]';
 	const siteDetail = await client.fetch(siteDetails);
+	const homeQuery = '*[_type == "home"]';
+	const homeData = await client.fetch(homeQuery);
 	return {
-		props: { sites, siteDetail },
+		props: { sites, siteDetail, homeData },
 	};
 };
 export default Sites;

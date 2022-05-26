@@ -1,7 +1,8 @@
 import React from "react";
 import { urlFor } from "../lib/client";
 
-const SiteCard = ({ site }) => {
+const SiteCard = ({ site, homeData }) => {
+	console.log(homeData);
 	return (
 		<div className="site-detail-card">
 			<div className="site-detail-card-top">
@@ -19,12 +20,22 @@ const SiteCard = ({ site }) => {
 			<div className="site-detail-card-bottom">
 				{site.warning && (
 					<div className="site-detail-card-right-bottom">
+						<h4>Attention</h4>
 						<p>{site.warning}</p>
 					</div>
 				)}
 				{site.fqme && (
 					<div className="site-detail-card-left-bottom">
-						<h4>À noter</h4>
+						<div className="site-detail-join">
+							<div className="site-detail-join-left">
+								<h4>À noter</h4>
+								<a href="/">Adhérer En Ligne</a>
+							</div>
+							<div className="joinimg">
+								<img src={urlFor(homeData.fqmeLogo)} alt="" />
+							</div>
+						</div>
+
 						<p>
 							Les sites suivants sont des sites fédérés. Il vous faut ainsi une
 							adhésion annuelle ou journalière de la FQME pour y grimper.
