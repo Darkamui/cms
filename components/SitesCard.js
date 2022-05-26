@@ -1,12 +1,12 @@
 import React from "react";
-
+import Link from "next/link";
 const Sites = ({ site }) => {
 	return (
 		<div className="sites-box">
 			{site.link ? (
-				<a href={"/" + site.link}>
+				<Link to={"/" + site.link}>
 					<h3 className="sites-title">{site.sector}</h3>
-				</a>
+				</Link>
 			) : (
 				<h3 className="sites-title">{site.sector}</h3>
 			)}
