@@ -116,6 +116,11 @@ const Navbar = ({ homeData }) => {
 								<Link href="/">Accueil</Link>
 							</div>
 							<div onClick={() => setToggleMenu(false)}>
+								<Link href="/news" onClick={() => setToggleMenu(false)}>
+									Nouvelles
+								</Link>
+							</div>
+							<div onClick={() => setToggleMenu(false)}>
 								<Link href="/activities" onClick={() => setToggleMenu(false)}>
 									Activités
 								</Link>
@@ -126,17 +131,18 @@ const Navbar = ({ homeData }) => {
 									Où Grimper ?
 								</Link>
 							</div>
-
+							<div onClick={() => setToggleMenu(false)}>
+								<Link href="/sites" onClick={() => setToggleMenu(false)}>
+									Liste des parois
+								</Link>
+							</div>
 							<div onClick={() => setToggleMenu(false)}>
 								<Link href="/ski" onClick={() => setToggleMenu(false)}>
 									Ski Hors Piste
 								</Link>
 							</div>
-
-							<div onClick={() => setToggleMenu(false)}>
-								<Link href="/news" onClick={() => setToggleMenu(false)}>
-									Nouvelles
-								</Link>
+							<div className="fb-logo">
+								<Image src="/fb.webp" width="50px" height="50" />
 							</div>
 						</div>
 					)}

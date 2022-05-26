@@ -380,7 +380,7 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 840px) {
 	.about-left-text,
 	.about-right-text {
-		padding: 3rem;
+		padding: 1rem 1.5rem;
 		font-size: 1.2rem;
 	}
 	.about-left,
@@ -393,7 +393,7 @@ body::-webkit-scrollbar-thumb {
 	.about-box {
 		background: none;
 		max-height: 100rem;
-
+		padding-bottom: 2rem;
 		box-shadow: none;
 	}
 }
@@ -494,12 +494,13 @@ body::-webkit-scrollbar-thumb {
 		font-size: 2rem;
 	}
 	.join-box-content {
-		padding: 1rem;
+		padding: 0rem;
+		max-width: 90%;
 	}
 }
 @media screen and (max-width: 540px) {
 	.join-section {
-		padding: 3rem;
+		padding: 1rem;
 	}
 }
 /* 	TEAM SECTION */
@@ -556,8 +557,15 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 @media screen and (max-width: 540px) {
-	.join-section {
-		padding: 3rem;
+	.profile-card img {
+		max-width: 15rem;
+		width: 100%;
+	}
+	.profile-name {
+		font-size: 1.5rem;
+	}
+	.profile-job {
+		font-size: 1.25rem;
 	}
 }
 
