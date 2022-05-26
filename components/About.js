@@ -6,14 +6,19 @@ const About = ({ homeData }) => {
 		<motion.div className="about-section">
 			<div className="about-mainbox">
 				<motion.h2
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 0.5 }}
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.75, ease: "easeIn" }}
 					className="about-title"
 				>
 					À Propos
 				</motion.h2>
-				<motion.div className="about-box">
+				<motion.div
+					className="about-box"
+					initial={{ opacity: 0, y: 200 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.75, ease: "easeIn" }}
+				>
 					<motion.div className="about-left">
 						<motion.div className="about-left-img">
 							<img src={urlFor(homeData.about1)} alt="" />

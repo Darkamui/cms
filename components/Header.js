@@ -10,7 +10,7 @@ const Header = ({ news }) => {
 				<motion.h1
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.5, delay: 0.5 }}
+					transition={{ duration: 0.75, ease: "easeIn" }}
 					className="header-title"
 				>
 					Club de Montagne du Saguenay
@@ -18,7 +18,7 @@ const Header = ({ news }) => {
 				<motion.p
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.5, delay: 0.75 }}
+					transition={{ duration: 0.5, delay: 0.75, ease: "easeIn" }}
 					className="header-text"
 				>
 					Le Club de Montagne du Saguenay (CMS), créé en 1971, a pour principal
@@ -30,7 +30,7 @@ const Header = ({ news }) => {
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.5, delay: 1 }}
+					transition={{ duration: 0.5, delay: 1, ease: "easeIn" }}
 					className="header-buttons"
 				>
 					<Link href="/activities">connaître nos activités</Link>

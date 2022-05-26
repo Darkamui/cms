@@ -1,10 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import { urlFor } from "../lib/client";
+import { motion } from "framer-motion";
 const Join = ({ homeData }) => {
 	return (
 		<div className="join-section">
-			<div className="join-box">
+			<motion.div
+				className="join-box"
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				transition={{ duration: 0.75, ease: "easeIn" }}
+			>
 				<div className="join-box-top">
 					<h3 className="join-title">Adhérer</h3>
 					<img src={urlFor(homeData.fqmeLogo)} alt="" />
@@ -33,7 +39,7 @@ const Join = ({ homeData }) => {
 						Adhèrer en ligne
 					</Link>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 };
