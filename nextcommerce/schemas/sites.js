@@ -8,7 +8,11 @@ export default {
 			title: "Nom de secteur",
 			type: "string",
 		},
-
+		{
+			name: "link",
+			title: "Lien vers détail sur page",
+			type: "string",
+		},
 		{
 			name: "links",
 			title: "Paroi",
